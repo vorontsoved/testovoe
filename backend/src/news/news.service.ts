@@ -35,7 +35,7 @@ export class NewsService {
         newNews.header = news.header
         newNews.body = news.body
         newNews.update_date = new Date()
-
+        
         const createdNews = await this.newsRepository.update(news.idNews, newNews)
 
         return createdNews
@@ -43,7 +43,7 @@ export class NewsService {
     }
 
     async deleteNews(news: UpdateNewsDto): Promise<Record<string, any>> {
-    
+       
         const deleteNews = await this.newsRepository.delete(news.idNews)
 
         return deleteNews

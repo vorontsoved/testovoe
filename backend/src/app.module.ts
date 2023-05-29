@@ -2,9 +2,6 @@ import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as cookieParser from 'cookie-parser';
-
-
-import { ItemsModule } from './items/items.module';
 import { UsersService } from './users/users.service';
 import { UsersController } from './users/users.controller';
 import { UsersModule } from './users/users.module';
@@ -31,7 +28,6 @@ import { NewsController } from './news/news.controller';
         logging: true
       }),
     }),
-    ItemsModule,
     UsersModule,
     NewsModule,
   ],
